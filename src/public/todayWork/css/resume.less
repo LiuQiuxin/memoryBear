@@ -1,0 +1,86 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.container{
+    padding:30px 200px;
+    font-family: 'Times New Roman',cursive;
+    //设置头部样式
+    .header{
+        h1{
+            letter-spacing: 5px;
+            font-size: 35px;
+            margin-bottom: 5px;
+        }
+        div{
+            span{
+                font-size: 20px;
+                letter-spacing: 2px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    //设置其他分栏样式
+    //设置分栏标题样式
+    h2{
+        border-bottom: 1px solid black;
+        font-size: 30px;
+        margin: 20px 0px;
+    }
+
+    //设置教育经历样式
+    .school{
+        margin: 5px 0px;
+        display: flex;
+        span{
+            display: inline-block;
+            width: 150px;
+            margin-right:60px;
+        }
+    }
+
+    //设置专业技能和项目经历样式
+    ul{
+        li{
+            margin-left:100px;
+        }
+    }
+
+    ul.tools,
+    ul.reward{
+        li{
+            margin-left:30px;
+        }
+    }
+
+    span,
+    li{
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        list-style:decimal;
+        font-weight: normal;
+    }
+
+    .projects{
+        .project{
+            margin-bottom: 10px;
+            .description{
+                font-size: 20px;
+                font-weight: bolder;
+                margin-bottom: 5px;
+                display: inline-block;
+                &.subtitle{
+                    font-size: 25px;
+                }
+            }
+
+           
+        }
+    }
+
+}

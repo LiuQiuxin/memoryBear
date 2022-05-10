@@ -1,0 +1,111 @@
+*{
+    margin:0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+//设置背景色
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;//将窗口大小设置为100%
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+
+    &:hover .container .logo-container img{
+        //设置图片旋转的动画效果
+        animation-name:imgRotate;
+        animation-duration:3s;
+        animation-iteration-count:infinite;
+        animation-direction: normal;
+        animation-fill-mode:none;
+
+    }
+}
+
+//图片旋转的关键帧
+@keyframes imgRotate {
+    /*from表示动画的开始位置 也可以使用0%代替from*/
+    from{
+        transform:rotate(0deg);
+    }
+    
+    /*to表示动画的结束位置 也可以使用100%代替to*/
+    100%{
+        transform: rotate(360deg);
+    } 
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .logo-container{
+        img{
+            width:200px;
+            height:200px;
+            border-radius:50%;
+            &:hover{
+                animation-play-state:paused;
+            }
+        }
+
+        h1{
+            text-align: center;
+            color:#fff;
+            font-weight: normal;
+            font-size: 70px;
+            letter-spacing: 10px;
+            font-family:cursive,'Courier New', Courier, monospace;
+        }
+    }
+
+    h2{
+        font-family: cursive;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        font-size: 30px;
+        font-weight: normal; 
+    }
+    .title-container{
+        margin-bottom: 20px;
+        &::before,
+        &::after{
+            content:"";
+            width: 100%;
+            height: 1px;
+            border-bottom: #fff 1px solid;
+            display: block;
+            margin:10px 0px;
+        }
+    }
+
+    .navigator{
+        display: flex;
+        margin-top: 100px;
+        a{
+            width:100px;
+            color:white;
+            border-radius: 10px;
+            border:3px solid #fff;
+            text-align: center;
+            font-size: 20px;
+            font-family: cursive;
+            font-weight:bold;
+            box-sizing: border-box;
+            line-height: 40px;
+            margin-left: 10px;
+            &:hover{
+                background-color: #3cba92;
+            }
+        }
+
+
+    }
+
+    
+}
+

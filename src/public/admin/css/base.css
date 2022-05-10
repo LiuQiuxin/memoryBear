@@ -1,0 +1,305 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  height: 100vh;
+  background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+}
+.header-container {
+  background-color: #000;
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+}
+.header-container .header {
+  width: 1224px;
+  margin: 0px auto;
+  height: 60px;
+  padding: 2px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-container .header img {
+  height: 56px;
+  border-radius: 100%;
+}
+.header-container .header .menu {
+  display: flex;
+  align-items: center;
+}
+.header-container .header .menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  margin-left: 20px;
+  font-weight: normal;
+  font-size: 20px;
+  letter-spacing: 10px;
+  background-color: #0ba360;
+  line-height: 40px;
+  width: 100px;
+  border-radius: 3px;
+  text-align: center;
+  text-indent: 10px;
+}
+.header-container .header .menu a:hover {
+  letter-spacing: 15px;
+  text-indent: 15px;
+  background-color: #3cba92;
+}
+.container {
+  width: 200px;
+  margin: 0px auto;
+  position: relative;
+}
+.container .panda {
+  position: relative;
+  width: 200px;
+}
+.container .panda .face {
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 100%;
+  position: relative;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+.container .panda .face .eye-shadow {
+  width: 50px;
+  height: 80px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+}
+.container .panda .face .eye-shadow.left {
+  transform: rotate(45deg);
+  left: 30px;
+}
+.container .panda .face .eye-shadow.right {
+  transform: rotate(-45deg);
+  right: 30px;
+}
+.container .panda .face .eye-white {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: 68px;
+}
+.container .panda .face .eye-white .eye-ball {
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 100%;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+.container .panda .face .eye-white.left {
+  left: 38px;
+}
+.container .panda .face .eye-white.right {
+  right: 38px;
+}
+.container .panda .face .nose {
+  width: 35px;
+  height: 20px;
+  background-color: #000;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  bottom: 65px;
+  border-radius: 42px 42px 60px 60px / 30px 30px 60px 60px;
+}
+.container .panda .face .mouth {
+  width: 68px;
+  height: 25px;
+  border-bottom: 7px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  bottom: 35px;
+}
+.container .panda .ear {
+  width: 70px;
+  height: 70px;
+  background-color: #000;
+  border-radius: 100%;
+  position: absolute;
+  top: -10px;
+  z-index: -1;
+}
+.container .panda .ear.right {
+  right: 0px;
+}
+.container .panda .body {
+  width: 250px;
+  height: 280px;
+  background-color: #fff;
+  position: relative;
+  left: -25px;
+  top: -10px;
+  border-radius: 100px 100px 100px 100px / 126px 126px 96px 96px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.container .panda .foot {
+  width: 82px;
+  height: 120px;
+  background-color: #000;
+  position: absolute;
+  bottom: 8px;
+  z-index: 3;
+  border-radius: 40px 40px 35px 40px / 26px 26px 63px 63px;
+  /*before和after伪元素默认是行内元素，其content属性表示其中的内容，如果不给
+              content赋值before和after就不起作用。伪元素不会生成html中的dom节点，故无法
+              使用js来操作伪元素
+            */
+}
+.container .panda .foot .sole,
+.container .panda .foot .sole::before,
+.container .panda .foot .sole::after {
+  width: 20px;
+  height: 30px;
+  background-color: #222;
+  position: absolute;
+  border-radius: 50%;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  top: 8px;
+}
+.container .panda .foot .sole::before {
+  content: "";
+  left: -45px;
+}
+.container .panda .foot .sole::after {
+  content: "";
+  left: 25px;
+}
+.container .panda .foot.left {
+  left: -80px;
+}
+.container .panda .foot.right {
+  right: -80px;
+}
+.container .panda .foot::after {
+  content: "";
+  width: 55px;
+  height: 65px;
+  background-color: #222;
+  position: absolute;
+  border-radius: 50%;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  bottom: 10px;
+}
+.container .login-box {
+  width: 400px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 3px;
+  position: absolute;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.3s;
+}
+.container .login-box .hand,
+.container .login-box .hand::after,
+.container .login-box .hand::before {
+  width: 40px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 50px;
+  position: absolute;
+  top: 70px;
+  left: -20px;
+}
+.container .login-box .hand::before {
+  content: "";
+  top: 16px;
+  left: 0px;
+}
+.container .login-box .hand::after {
+  content: "";
+  top: 32px;
+  left: 0px;
+}
+.container .login-box .hand.right {
+  right: -20px;
+  left: auto;
+}
+.container .login-box h1 {
+  color: #0ba360;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.container .login-box .ipt-box {
+  width: 80%;
+  margin-top: 25px;
+  position: relative;
+}
+.container .login-box .ipt-box input {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-bottom: 1px solid #bbb;
+  text-indent: none;
+  outline: none;
+  transition: 0.3s;
+}
+.container .login-box .ipt-box input:focus,
+.container .login-box .ipt-box input:valid {
+  border-color: #0ba360;
+  box-shadow: 0px 1px #0ba360;
+}
+.container .login-box .ipt-box input:focus ~ label,
+.container .login-box .ipt-box input:valid ~ label {
+  color: #0ba360;
+  font-size: 12px;
+  transform: translateY(-15px);
+}
+.container .login-box .ipt-box label {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  font-size: 14px;
+  color: #888;
+  transition: 0.3s;
+  pointer-events: none;
+}
+.container .login-box button {
+  width: 150px;
+  height: 40px;
+  background-color: #0ba360;
+  border: none;
+  border-radius: 3px;
+  margin-top: 30px;
+  color: #fff;
+  letter-spacing: 10px;
+  text-indent: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container .login-box button:hover {
+  letter-spacing: 25px;
+  text-indent: 25px;
+  background-color: #3cba92;
+}
+.login-box.up {
+  left: 50%;
+  top: 55%;
+}

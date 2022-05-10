@@ -1,0 +1,49 @@
+{{extend "./common/layout.art"}}
+
+{{block "link"}}
+    <link rel="stylesheet" href="/admin/css/error.css">
+{{/block}}
+
+{{block "main"}}
+    <div class="container">
+        <div class="panda">
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+            <div class="face">
+                <div class="eye-shadow left"></div>
+                <div class="eye-white left">
+                    <div class="eye-ball"></div>
+                </div>
+                <div class="eye-shadow right"></div>
+                <div class="eye-white right">
+                    <div class="eye-ball"></div>
+                </div>
+                <div class="nose"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="body"></div>
+            <div class="foot left">
+                <div class="sole"></div>
+            </div>
+            <div class="foot right">
+                <div class="sole"></div>
+            </div>
+        </div>
+        <div class="login-box">
+            <div class="error">ERROR</div>
+            <div class="msg">{{errorMsg}}</div>
+            <div class="hand left"></div>
+            <div class="hand right"></div>
+        </div>
+    </div>
+
+    {{block "script"}}
+        <script type="text/javascript">
+            //发送错误3秒后重定向回登录页面
+            setTimeout(function(){
+                //location.href = "/admin/login";
+                location.href = document.referrer;
+            },3000);
+        </script>
+    {{/block}}
+{{/block}}

@@ -1,0 +1,28 @@
+<div class="header">
+    <div class="w1100">
+        <!-- 网站logo开始 -->
+        <h1 class="logo fl">
+            <a href="/"><img src="/images/logo.png" alt="记忆熊"></a>
+        </h1>
+        <!-- 网站logo结束 -->
+        <!-- 网站导航开始 -->
+        <ul class="navigation fr">
+            <li>
+                <a href="/">首页</a>
+            </li>
+            <li>
+                <a href='{{userInfo?"/admin/login":"/admin/logout"}}'>{{userInfo&&"退出登录" ||"登录"}}</a>
+            </li>
+            <li>
+                <a href="#" class="active">学习笔记</a>
+            </li>
+             <li>
+                <a href="/todaywork/addarticle">添加新笔记</a>
+            </li>
+            <li>
+                <a href="/todaywork/resume">个人简历</a>
+            </li>
+        </ul>
+        <!-- 网站导航结束 -->
+    </div>
+</div>

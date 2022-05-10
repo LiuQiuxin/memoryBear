@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文章详情</title>
+	<link rel="stylesheet" href="/todayWork/css/base.css">
+	<link rel="stylesheet" href="/todayWork/css/article.css">
+    {{block "link"}}{{/block}}
+</head>
+<body>
+    {{block "mian"}}{{/block}}
+    {{block "javascript"}}{{/block}}
+</body>
+</html>

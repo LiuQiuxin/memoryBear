@@ -1,0 +1,61 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  padding: 30px 200px;
+  font-family: 'Times New Roman', cursive;
+}
+.container .header h1 {
+  letter-spacing: 5px;
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+.container .header div span {
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.container h2 {
+  border-bottom: 1px solid black;
+  font-size: 30px;
+  margin: 20px 0px;
+}
+.container .school {
+  margin: 5px 0px;
+  display: flex;
+}
+.container .school span {
+  display: inline-block;
+  width: 150px;
+  margin-right: 60px;
+}
+.container ul li {
+  margin-left: 100px;
+}
+.container ul.tools li,
+.container ul.reward li {
+  margin-left: 30px;
+}
+.container span,
+.container li {
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  list-style: decimal;
+  font-weight: normal;
+}
+.container .projects .project {
+  margin-bottom: 10px;
+}
+.container .projects .project .description {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.container .projects .project .description.subtitle {
+  font-size: 25px;
+}

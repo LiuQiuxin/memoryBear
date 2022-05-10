@@ -1,0 +1,1 @@
+# art-template中的each只能遍历对象或数组，不能遍历Number类型的数据

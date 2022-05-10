@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-container {
+  margin-bottom: 10px;
+}
+.container .login-box {
+  height: 280px;
+  top: 63%;
+}
+.container .panda .body {
+  height: 300px;
+}
+.container .login-box .error {
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: black;
+}
+.container .login-box .msg {
+  color: #0ba360;
+  font-size: 24px;
+  font-family: cursive;
+  font-weight: bold;
+}

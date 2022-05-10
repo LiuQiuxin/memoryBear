@@ -1,0 +1,13 @@
+.header-container {
+  margin-bottom: 10px;
+}
+.container .login-box {
+  height: 400px;
+  top: 63%;
+}
+.container .panda .body {
+  height: 360px;
+}
+.login-box.up {
+  top: 58%;
+}

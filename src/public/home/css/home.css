@@ -1,0 +1,91 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+}
+body:hover .container .logo-container img {
+  animation-name: imgRotate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+@keyframes imgRotate {
+  /*from表示动画的开始位置 也可以使用0%代替from*/
+  from {
+    transform: rotate(0deg);
+  }
+  /*to表示动画的结束位置 也可以使用100%代替to*/
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .logo-container img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.container .logo-container img:hover {
+  animation-play-state: paused;
+}
+.container .logo-container h1 {
+  text-align: center;
+  color: #fff;
+  font-weight: normal;
+  font-size: 70px;
+  letter-spacing: 10px;
+  font-family: cursive, 'Courier New', Courier, monospace;
+}
+.container h2 {
+  font-family: cursive;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: normal;
+}
+.container .title-container {
+  margin-bottom: 20px;
+}
+.container .title-container::before,
+.container .title-container::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  border-bottom: #fff 1px solid;
+  display: block;
+  margin: 10px 0px;
+}
+.container .navigator {
+  display: flex;
+  margin-top: 100px;
+}
+.container .navigator a {
+  width: 100px;
+  color: white;
+  border-radius: 10px;
+  border: 3px solid #fff;
+  text-align: center;
+  font-size: 20px;
+  font-family: cursive;
+  font-weight: bold;
+  box-sizing: border-box;
+  line-height: 40px;
+  margin-left: 10px;
+}
+.container .navigator a:hover {
+  background-color: #3cba92;
+}

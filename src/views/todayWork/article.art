@@ -1,0 +1,54 @@
+{{extend "./common/layout.art"}}
+
+{{block "mian"}}
+	<!-- 头部框架开始 -->
+	{{include "./common/header.art"}}
+	<!-- 头部框架结束 -->
+	<!-- 文章框架开始 -->
+	<div class="article">
+		<div class="w1100">
+			<div class="container">
+				<div class="article-header">
+					<h3 class="article-title">{{articleInfo&&articleInfo.title}}</h3>
+					<div class="article-info">
+						<span class="author">{{articleInfo&&articleInfo.author}}</span>
+						<span>{{articleInfo&&articleInfo.publishDate}}</span>
+					</div>
+				</div>
+				<div class="article-content">
+					{{@articleInfo.content}}
+				</div>
+				<div class="article-comment">
+					<h4>评论</h4>
+
+				{{if userInfo}}
+					<form class="comment-form" action="/todaywork/addcomment?username={{userInfo.username}}&email={{userInfo.email}}&id={{@articleInfo._id}}" method="post">
+						<textarea class="comment" name="comment"></textarea>
+						<div class="items">
+							<input type="submit" value="提交">
+						</div>
+					</form>
+				{{else}}
+					<div><h2>先进行登录，再对文章进行评论</h2></div>
+				{{/if}}
+
+				{{each commentsInfo}}
+					<div class="comment-list">
+						<div class="mb10">
+							<div class="article-info">
+								<span class="author">{{$value.username}}</span>
+								<span>{{dateFormat($value.createdAt,"yyyy-mm-dd")}}</span>
+								<span>{{$value.email}}</span>
+							</div>
+							<div class="comment-content">
+								{{@$value.comment}}
+							</div>
+						</div>
+					</div>
+				{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 文章框架结束 -->
+{{/block}}

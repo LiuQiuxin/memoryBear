@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Blog - Content Manager</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/article-edit.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <!-- 网站标志 -->
+        <div class="logo fl">
+            <div class="logo fl">
+              今日营业 <img src="../images/homeLogo.png" alt="记忆熊">
+            </div>
+        </div>
+        <!-- /网站标志 -->
+        <!-- 用户信息 -->
+        <div class="info">
+            <div class="profile dropdown fr">
+                <span class="btn dropdown-toggle" data-toggle="dropdown">
+                    {{userInfo && userInfo.username}}
+                </span>
+                <ul class="dropdown-menu">
+                    <li><a href="user-edit.html">个人资料</a></li>
+                    <li><a href="#">退出登录</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /用户信息 -->
+    </div>
+    <!-- /头部 -->
+    <!-- 主体内容 -->
+    <div class="content">
+        <!-- 侧边栏 -->
+        <div class="aside fl">
+            <ul class="menu list-unstyled">
+                <li>
+                    <a class="item active" href="/todaywork">
+                        <span class="glyphicon glyphicon-user"></span>
+                        学习笔记
+                    </a>
+                </li>
+                <li>
+                    <a class="item" href="#">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        添加新笔记
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 侧边栏 -->
+        <div class="main">
+            <!-- 分类标题 -->
+            <div class="title">
+                <h4>5b9a716cb2d2bf17706bcc0a</h4>
+            </div>
+            <!-- /分类标题 -->
+            <form class="form-container">
+                <div class="form-group">
+                    <label>标题</label>
+                    <input type="text" class="form-control" placeholder="请输入文章标题">
+                </div>
+                <div class="form-group">
+                    <label>作者</label>
+                    <input type="text" class="form-control" readonly>
+                </div>
+                <div class="form-group">
+                    <label>发布时间</label>
+                    <input type="date" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                   <label for="exampleInputFile">文章封面</label>
+                   <input type="file" id="file">
+                   <div class="thumbnail-waper">
+                       <img class="img-thumbnail" src="" id="preview">
+                   </div>
+                </div>
+                <div class="form-group">
+                    <label>内容</label>
+                    <textarea class="form-control" id="editor"></textarea>
+                </div>
+                <div class="buttons">
+                    <input type="submit" style="background-color:#0ba360;" class="btn btn-primary">
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <!-- /主体内容 -->
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/ckeditor5/ckeditor.js"></script>
+    <script type="text/javascript">
+        let editor;
+        ClassicEditor
+                .create( document.querySelector('#editor'))
+                .then(newEditor => {
+                    editor = newEditor;
+                })
+                .catch( error => {
+                    console.error( error );
+                });
+
+        // 获取数据
+        // const editorData = editor.getData();
+
+        //实现图片阅览
+        const file = document.getElementById("file");
+        const preview = document.getElementById("preview");
+
+        file.onchange = function(){
+            var reader = new FileReader();
+            reader.readAsDataURL(this.files[0]);
+            //监听onlaod事件，在文件读取完毕后获取文件读取结果
+            reader.onload = function(){
+                //将文件读取的结果显示到页面中保存
+                preview.src = reader.result;
+            }
+        }
+    </script>
+</body>
+
+</html>
